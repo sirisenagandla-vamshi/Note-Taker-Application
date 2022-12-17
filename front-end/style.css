@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(45deg, #ff9ce3, #4ab3ff);
+    color: white;
+    overflow: hidden;
+    opacity: 0;
+    transition:opacity 1sec ease;
+}
+
+.visible{
+    opacity: 1;
+}
+
+nav{
+    height:10vh;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 80px;
+}
+
+.sign-in-sign-up{
+    background: rgba(255,255,255, 0.35);
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid white;
+    backdrop-filter: blur( 6px );
+    -webkit-backdrop-filter: blur( 6px );
+    cursor: pointer;
+}
+
+main{
+    height: 90vh;
+    width: 100%;
+    padding: 0 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main > div {
+    width: 50%;
+}
+
+.left-section{
+    transform:translateY(-100%);
+}
+
+.heading{
+    font-size: 55px;
+    letter-spacing: 3px;
+
+}
+
+.sub-heading{
+    font-size: 25px;
+    font-weight: normal;
+    letter-spacing: 3px;
+}
+
+.right-section{
+    transform: translateY(-60px);
+    display: flex;
+    justify-content: flex-end;
+}
+.homepage-illustration{
+    width: 80%;
+}
+
+.circle1, .circle2 {
+    position: absolute;
+    z-index: -10;
+
+}
+
+.circle1{
+    background: linear-gradient(180deg, #97ff57 0%, #0d99ff 99.9%, #0094ff 100%);
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    filter: blur(10px);
+    transform: rotate(18deg);
+    left: -120px;
+    top: -180px;   
+}
+
+.circle2{
+    background: linear-gradient(180deg, #ff57d0, #0452fa);
+    width: 400px;
+    height: 400px;
+    transform: rotate(18deg);
+    border-radius: 50%;
+    filter: blur(4px);
+    right: -50px;
+    bottom: -80px;
+    
+
+}
+
+.sign-in-sign-up span {
+    cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.sign-in-sign-up span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+
+  .sign-in-sign-up:hover span {
+    padding-right: 25px;
+  }
+  
+  .sign-in-sign-up:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  

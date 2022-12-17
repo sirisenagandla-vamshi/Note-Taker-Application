@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color:black;
+}
+
+body{
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(45deg, #f878d4, #4ab3ff);
+    overflow: hidden;
+    opacity: 1;
+    padding: 150px;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    padding: 0 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.signIn-container{
+    width: 400px;
+    height: 450px;
+    background: rgba(255,255,255,0.3);;
+    padding: 50px;
+    border-radius: 25px;
+    border: 1px solid white;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.signUp-container{
+    width: 420px;
+    height: 550px;
+    background: rgba(255,255,255,0.3);;
+    padding: 40px;
+    border-radius: 25px;
+    border: 1px solid white;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.heading{
+    color: white;
+}
+
+input {
+    background-color: white;
+    border: none;
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+}
+
+.signUp-email, .signUp-name, .signUp-password, .signUp-retyped-password{
+    width: 92%;
+}
+
+.button{
+    background: transparent;
+    padding: 10px;
+    border-radius: 25px;
+    border: 1px solid white;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    cursor: pointer;
+    width: 35%;
+    text-align: center;
+    color: white;
+
+}
+
+.circle1 , .circle2{
+    z-index: -1;
+
+}
+
+.circle1{
+    background: linear-gradient(180deg, #0452fa, #75f327);
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    filter: blur(6px);
+
+    position: absolute;
+    left: -120;
+    top: -100;
+}
+
+.circle2{
+    background: linear-gradient(180deg, #ff57d0, #0452fa);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    filter: blur(6px);
+
+    position: absolute;
+    right: -45;
+    bottom: -45;
+}
+
+.signIn-button span,  .signUp-button span{
+    cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.signIn-button span:after, .signUp-button span:after{
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+
+  .signIn-button:hover span, .signUp-button:hover span {
+    padding-right: 25px;
+  }
+  
+  .signIn-button:hover span:after, .signUp-button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  
+
